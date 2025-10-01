@@ -100,5 +100,17 @@ fecha.addEventListener("blur", fechaBlur);
 
 // 2. Prueba con varias frases, utilizando String.replace() y una expresión regular
 
-const palabrasMalsonantes = "cabron gilipollas subnormal";
-palabrasMalsonantes.replaceAll(palabrasMalsonantes, "***")
+const palabrasMalsonantes = "cabron|gilipollas|subnormal";
+
+// Frase de prueba
+let frase = "Ese cabron es un subnormal y un gilipollas";
+
+// Creamos una expresión regular a partir de las palabras malsonantes
+const regex4 = new RegExp(`\\b(${palabrasMalsonantes})\\b`, 'gi');
+
+// Reemplazamos las palabras malsonantes por asteriscos
+let fraseLimpia = frase.replace(regex, "***");
+
+console.log(fraseLimpia);
+
+
