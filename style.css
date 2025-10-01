@@ -1,0 +1,7 @@
+.invalido{
+    border: solid 2px red;
+}
+
+.valido{
+    border: solid 2px rgb(35, 122, 27);
+}

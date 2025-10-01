@@ -76,3 +76,29 @@ const validarFecha = (n) => {
 
 validarFecha(n.match("10/02/2016"))
 // 2. Implementa un formulario con un campo fecha y valida la entrada en el evento blur
+
+const fecha = document.querySelector(".fecha")
+const fechaBlur = () => {
+ const valor = fecha.value
+
+ if (validarFecha(valor)) {
+    fecha.classList.remove("invalido");
+    fecha.classList.add("valido");
+  } else {
+    fecha.classList.remove("valido");
+    fecha.classList.add("invalido");
+  }
+}
+
+fecha.addEventListener("blur", fechaBlur);
+
+
+
+// CE 3d: Se han generado textos y etiquetas como resultado de la ejecución de código en el navegador.
+
+// 1. Dado un texto con palabras malsonantes, reemplázalas por ***.
+
+// 2. Prueba con varias frases, utilizando String.replace() y una expresión regular
+
+const palabrasMalsonantes = "cabron gilipollas subnormal";
+palabrasMalsonantes.replaceAll(palabrasMalsonantes, "***")
